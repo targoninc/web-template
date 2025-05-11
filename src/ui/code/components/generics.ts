@@ -1,7 +1,5 @@
-import {Route} from "../routing/Route.ts";
 import {Tab} from "../models/Tab.ts";
 import {navigate} from "../routing/Router.ts";
-import {Home} from "./home.ts";
 import {AnyElement, compute, create, nullElement, Signal, signalMap, StringOrSignal} from "@targoninc/jess";
 
 export class Generics {
@@ -188,19 +186,3 @@ export class Generics {
     }
 }
 
-export const routes: Route[] = [
-    {
-        path: "/",
-        title: "Home",
-        aliases: ["home"],
-        template: Home.page,
-        icon: "home",
-        showInNav: true,
-    },
-    {
-        path: "404",
-        title: "404",
-        aliases: ["error", "not-found"],
-        template: Generics.notFound,
-    },
-];
